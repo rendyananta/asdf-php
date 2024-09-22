@@ -67,8 +67,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Update ubuntu repo
+        run: sudo apt update -y
+
       - name: Install shfmt
-        run: brew install shfmt
+        run: sudo apt install -y shfmt
 
       - name: Run shfmt
         run: make fmt-check
