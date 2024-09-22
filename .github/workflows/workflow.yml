@@ -21,7 +21,7 @@ jobs:
     container:
       image: ${{ matrix.container }}
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Install packages
@@ -59,7 +59,7 @@ jobs:
   #         version: ${{ matrix.php-version }}
 
   format:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout code
